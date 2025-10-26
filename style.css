@@ -64,7 +64,7 @@ body {
 	right: 0;
 	z-index: 9000;
 
-	background: rgba(26, 58, 82, 0.6);
+	background: rgba(26, 58, 82, 0.8);
 }
 
 .navbar-content-left {
@@ -207,7 +207,6 @@ body {
 
 	.content-box {
 		margin: auto;
-		
 	}
 
 	.menu-toggle {
@@ -232,7 +231,7 @@ body {
 		margin-top: 5rem;
 
 		/* Same background color as the navbar */
-		background: rgba(26, 58, 82, 0.6); 
+		background: rgba(26, 58, 82, .8);
 
 		flex-direction: column;
 		padding: 0;
@@ -254,6 +253,11 @@ body {
 		width: 100%;
 		text-align: center;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+		text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+		font-weight: 500;
+		font-size: 1.2rem;
+		color: var(--ice);
 	}
 
 	.navbar-content-left {
