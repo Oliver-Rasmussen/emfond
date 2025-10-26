@@ -52,6 +52,7 @@ body {
 .navbar {
 	display: flex;
 	flex-direction: row;
+
 	align-items: center;
 	justify-content: space-between;
 
@@ -141,10 +142,8 @@ body {
 .content-box {
 	max-width: 500px;
 
-	/* background: rgba(255, 255, 255, 0.5); */
 	background: rgba(26, 58, 82, 0.6);
 	color: var(--ice);
-	/* backdrop-filter: blur(10px); */
 
 	padding: 3rem;
 	border-radius: 8px;
@@ -184,6 +183,7 @@ body {
 .menu-toggle {
 	display: none;
 	flex-direction: column;
+	
 	gap: 5px;
 	background: none;
 	border: none;
@@ -205,41 +205,35 @@ body {
 		overflow: scroll;
 	}
 
+	.content-box {
+		margin: auto;
+		
+	}
+
 	.menu-toggle {
 		display: flex;
 		position: absolute;
+		
 		right: 1rem;
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 9001;
 	}
 
-	.navbar {
-		position: relative;
-	}
-
-	/* .navbar-content-right {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		background: rgba(26, 58, 82, 0.98);
-		backdrop-filter: blur(1.25rem);
-		flex-direction: column;
-		padding: 1rem 0;
-		gap: 0;
-	} */
-
+	/* Also dropdown for menu items */
 	.navbar-content-right {
 		display: flex;
-		/* Change from 'none' to 'flex' */
 		position: absolute;
-		top: 100%;
+		top: 0;
 		left: 0;
 		right: 0;
-		background: rgba(26, 58, 82, 0.98);
-		backdrop-filter: blur(1.25rem);
+		
+		/* Start dropdown just below the navbar height */
+		margin-top: 5rem;
+
+		/* Same background color as the navbar */
+		background: rgba(26, 58, 82, 0.6); 
+
 		flex-direction: column;
 		padding: 0;
 		gap: 0;
@@ -250,9 +244,9 @@ body {
 		transition: max-height 0.4s ease, padding 0.4s ease;
 	}
 
+	/* Menu dropdown content */
 	.navbar-content-right.active {
 		max-height: 300px;
-		padding: 1rem 0;
 	}
 
 	.navbar-content-right a {
@@ -287,8 +281,9 @@ body {
 
 @media (max-width: 480px) {
 	.logo {
-		height: 1.25rem;
+		height: 1.75rem;
 		width: auto;
+		margin: auto;
 	}
 
 	.navbar-content-left {
@@ -306,7 +301,7 @@ body {
 /* For even smaller devices */
 @media (max-width: 375px) {
 	.logo {
-		height: 1rem;
+		height: 1.25rem;
 	}
 
 	.navbar-content-left {
